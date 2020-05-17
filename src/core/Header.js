@@ -22,19 +22,19 @@ const Header = () => {
           </Nav>
           {!auth.isLoggedIn && (
             <Nav className="ml-auto">
-              <Nav.Link as={Link} to="/signIn">
-                Sign In
-              </Nav.Link>
               <Nav.Link as={Link} to="/signUp">
                 Sign Up
               </Nav.Link>
+              <Link className="btn btn-outline-primary" to="/signIn">
+                Sign In
+              </Link>
             </Nav>
           )}
           {auth.isLoggedIn && (
             <Nav className="ml-auto">
-              <Nav.Link as={Link} to="/Blogs/create">
+              <Link className="btn btn-outline-primary" to="/Blogs/create">
                 Write a blog
-              </Nav.Link>
+              </Link>
               <Nav.Link as={Link} to="/feeds/me">
                 Feeds
               </Nav.Link>
