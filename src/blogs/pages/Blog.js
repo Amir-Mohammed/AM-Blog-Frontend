@@ -84,9 +84,11 @@ const Blog = () => {
               </section>
               <section>
                 <div className="container">
-                  <h1 className="display-2 pb-3 pt-3 text-center font-weight-bold">
-                    {blog.title}
-                  </h1>
+                  <div className="col-md-12 pt-3 pt-3">
+                    <h1 className="display-4 font-weight-bold text-center">
+                      {blog.title}
+                    </h1>
+                  </div>
                   <p className="lead mt-3 mark">
                     Written by{" "}
                     <Link to={`/profile/${blog.postedBy.username}`}>

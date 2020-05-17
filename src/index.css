@@ -153,8 +153,17 @@ footer {
 }
 
 pre.ql-syntax {
-  background: #191925;
+  background: #b6b6c7;
   color: #ffffff !important;
   border-radius: 5px;
   padding: 20px 30px;
+}
+
+img {
+  padding: 0.25rem;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  max-width: 100%;
+  height: auto;
 }
