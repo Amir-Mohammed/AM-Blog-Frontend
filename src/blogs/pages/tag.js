@@ -46,7 +46,7 @@ const Tag = () => {
                 </div>
               </div>
             )}
-            {!loading && (
+            {!loading && blogs.length > 0 && (
               <div className="col-md-12 pt-3">
                 <h1 className="display-4 font-weight-bold text-center">
                   {tag.name}
@@ -57,6 +57,17 @@ const Tag = () => {
                     <hr />
                   </div>
                 ))}
+              </div>
+            )}
+            {!loading && blogs.length === 0 && (
+              <div className="container-fluid">
+                <div className="card">
+                  <div className="card-body">
+                    <h2 className="card-text">
+                      Currently, There is no blogs written under this tag.
+                    </h2>
+                  </div>
+                </div>
               </div>
             )}
           </header>
