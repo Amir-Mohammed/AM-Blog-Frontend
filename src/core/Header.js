@@ -11,7 +11,7 @@ const Header = () => {
     <React.Fragment>
       <Navbar bg="light" expand="lg">
         <Navbar.Brand as={Link} to="/feeds">
-          <span>AM</span> <span>Blog</span>
+          <span className="text-danger">J</span><span className="text-primary">S</span><span>Blog</span>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
@@ -25,14 +25,14 @@ const Header = () => {
               <Nav.Link as={Link} to="/signUp">
                 Sign Up
               </Nav.Link>
-              <Link className="btn btn-outline-primary" to="/signIn">
+              <Link className="btn btn-primary" to="/signIn">
                 Sign In
               </Link>
             </Nav>
           )}
           {auth.isLoggedIn && (
             <Nav className="ml-auto">
-              <Link className="btn btn-outline-primary" to="/Blogs/create">
+              <Link className="btn btn-primary" to="/Blogs/create">
                 Write a blog
               </Link>
               <Nav.Link as={Link} to="/feeds/me">
