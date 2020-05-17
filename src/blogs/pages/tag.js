@@ -23,12 +23,9 @@ const Tag = () => {
         setLoading(false);
       } catch (error) {
         setLoading(false);
-        if (error.request.status === 404) {
-          toast.error("Oops... page not found.");
-          history.push("/blogs");
-        } else {
-          toast.error("Something went wrong. Please try again.");
-        }
+        error.response
+          ? toast.error(error.response.data.message)
+          : toast.error("Something went wrong. Please try again.");
       }
     };
     fetch();
