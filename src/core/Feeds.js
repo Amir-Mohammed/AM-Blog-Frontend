@@ -88,7 +88,7 @@ const Feeds = () => {
         <header>
           <div className="col-md-12 pt-3">
             <h1 className="display-4 font-weight-bold text-center">
-              Programming Blogs and Tutorials
+              Javascript Tips &and; Tricks
             </h1>
           </div>
           {!loading && (
