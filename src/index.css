@@ -151,3 +151,10 @@ footer {
 .card-body {
   padding: 0.83rem 1.25rem !important;
 }
+
+pre.ql-syntax {
+  background: #191925;
+  color: #ffffff !important;
+  border-radius: 5px;
+  padding: 20px 30px;
+}
