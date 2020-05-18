@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { Field, Form, Formik } from "formik";
 import queryString from "query-string";
 import { Search as SearchIcon } from "react-bootstrap-icons";
+import { toast } from "react-toastify";
 
 const Search = () => {
   const [searched, setSearched] = useState(false);
@@ -33,13 +34,19 @@ const Search = () => {
       initialValues={{ search: "" }}
       onSubmit={async (values, { resetForm }) => {
         const query = queryString.stringify(values);
-        const { data } = await axios.get(
-          `${process.env.REACT_APP_BACKEND_URI}/blogs/search?${query}`
-        );
-        setResults(data);
-        setMessage(`${data.length} was found`);
-        setSearched(true);
-        resetForm();
+        try {
+          const { data } = await axios.get(
+            `${process.env.REACT_APP_BACKEND_URI}/blogs/search?${query}`
+          );
+          setResults(data);
+          setMessage(`${data.length} was found`);
+          setSearched(true);
+          resetForm();
+        } catch (error) {
+          error.response
+            ? toast.error(error.response.data.message)
+            : toast.error("Something went wrong. Please try again.");
+        }
       }}
     >
       {({ isSubmitting }) => (
@@ -72,9 +79,9 @@ const Search = () => {
   );
   return (
     <div className="container-fluid">
-      <div className="pt-3 pb-5">{searchForm()}</div>
+      <div className="pt-3 pb-3">{searchForm()}</div>
       {searched && (
-        <div style={{ marginTop: "-120px", marginBottom: "-80px" }}>
+        <div style={{ marginTop: "-95px", marginBottom: "-80px" }}>
           {searchedBlogs(results)}
         </div>
       )}

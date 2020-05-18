@@ -30,7 +30,7 @@ const Blog = () => {
         } else {
           toast.error("Something went wrong. Please try again.");
         }
-        history.push("/blogs");
+        history.push("/feeds");
       }
     };
     fetch();
@@ -74,11 +74,11 @@ const Blog = () => {
           <article>
             <div className="container-fluid">
               <section>
-                <div className="row" style={{ marginTop: "-30px" }}>
+                <div className="row">
                   <img
                     src={`${blog.image}`}
                     alt={blog.title}
-                    className="img featured-image ml-auto mr-auto"
+                    className="img featured-image mt-3 ml-auto mr-auto"
                   />
                 </div>
               </section>
@@ -112,12 +112,6 @@ const Blog = () => {
                 <div className="col-md-12 lead">{renderHTML(blog.body)}</div>
               </section>
             </div>
-
-            {/* <div className="container">
-                            <h4 className="text-center pt-5 pb-5 h2">RELATED BLOGS</h4>
-                            <div className="row">{showRelatedBlog()}</div>
-                        </div>*/}
-
             <div className="container pt-5 pb-5">{showComments()}</div>
           </article>
         </main>

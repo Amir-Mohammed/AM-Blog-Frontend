@@ -21,6 +21,8 @@ html {
   padding: 0.25rem;
   background-color: #fff;
   border-radius: 0.25rem;
+  max-width: 100%;
+  height: auto;
 }
 
 .invalid {
@@ -170,4 +172,19 @@ p img {
 
 .btn {
   box-shadow: none !important;
+}
+
+@media only screen and (max-width: 992px) {
+  .card-profile {
+    margin-bottom: 12px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .display-4 {
+    font-size: 2.5rem;
+  }
+  input[type="search"] {
+    margin-bottom: 0.5rem !important;
+  }
 }

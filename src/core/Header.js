@@ -34,18 +34,22 @@ const Header = () => {
           )}
           {auth.isLoggedIn && (
             <Nav className="ml-auto">
-              <Link className="btn btn-primary" to="/Blogs/create">
+              <Nav.Link as={Link} to="/Blogs/create">
                 Write a blog
-              </Link>
+              </Nav.Link>
               <Nav.Link as={Link} to="/feeds/me">
                 Feeds
               </Nav.Link>
-              <Nav.Link as={Link} to="/profile/me" color="royalblue">
+              <Nav.Link as={Link} to="/profile/me">
                 Profile <Person />
               </Nav.Link>
-              <Nav.Link as={Link} to="/signIn" onClick={auth.logout}>
+              <Link
+                to="/signIn"
+                className="btn btn-primary"
+                onClick={auth.logout}
+              >
                 Logout
-              </Nav.Link>
+              </Link>
             </Nav>
           )}
         </Navbar.Collapse>
