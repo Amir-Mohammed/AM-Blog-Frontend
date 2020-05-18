@@ -42,7 +42,7 @@ const Card = ({ blog }) => {
             <img
               className="img img-fluid"
               style={{ maxHeight: "auto", width: "100%" }}
-              src={`${process.env.REACT_APP_BACKEND_URI}/${blog.image}`}
+              src={`${blog.image}`}
               alt={blog.title}
             />
           </section>

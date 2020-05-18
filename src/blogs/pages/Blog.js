@@ -76,7 +76,7 @@ const Blog = () => {
               <section>
                 <div className="row" style={{ marginTop: "-30px" }}>
                   <img
-                    src={`${process.env.REACT_APP_BACKEND_URI}/${blog.image}`}
+                    src={`${blog.image}`}
                     alt={blog.title}
                     className="img img-fluid featured-image"
                   />

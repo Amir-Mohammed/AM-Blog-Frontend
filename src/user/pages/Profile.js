@@ -104,10 +104,7 @@ const Profile = () => {
                     <span className="text-capitalize">{user.username}</span>'s
                     Profile
                   </Card.Header>
-                  <Card.Img
-                    variant="top"
-                    src={`${process.env.REACT_APP_BACKEND_URI}/${user.image}`}
-                  />
+                  <Card.Img variant="top" src={`${user.image}`} />
                   <Card.Body style={{ className: "text-center" }}>
                     <Nav variant="pills" className="flex-column">
                       <Nav.Item>
