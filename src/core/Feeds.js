@@ -12,14 +12,14 @@ const Feeds = () => {
   const [limit] = useState(3);
   const [skip, setSkip] = useState(0);
   const [size, setSize] = useState(null);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   const auth = useContext(AuthContext);
 
   useEffect(() => {
     const fetchData = async () => {
-      setLoading(true);
       try {
+        setLoading(true);
         const { data } = await axios.get(
           `${process.env.REACT_APP_BACKEND_URI}/feeds?limit=${limit}&skip=${skip}`
         );
@@ -98,17 +98,24 @@ const Feeds = () => {
           )}
         </header>
       </div>
-      {loading && (
+      {!blogs.length && (
         <div className="d-flex justify-content-center mt-4">
           <div className="spinner-border" role="status">
             <span className="sr-only">Loading...</span>
           </div>
         </div>
       )}
-      {!loading && (
+      {blogs.length && (
         <div>
           <div className="container-fluid">{showAllBlogs()}</div>
           <div className="text-center pt-5 pb-5">{loadMoreButton()}</div>
+          {loading && (
+            <div className="d-flex justify-content-center mt-4">
+              <div className="spinner-border" role="status">
+                <span className="sr-only">Loading...</span>
+              </div>
+            </div>
+          )}
         </div>
       )}
     </main>
