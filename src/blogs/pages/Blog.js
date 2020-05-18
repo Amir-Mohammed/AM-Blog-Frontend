@@ -78,7 +78,7 @@ const Blog = () => {
                   <img
                     src={`${blog.image}`}
                     alt={blog.title}
-                    className="img img-fluid featured-image"
+                    className="img featured-image ml-auto mr-auto"
                   />
                 </div>
               </section>

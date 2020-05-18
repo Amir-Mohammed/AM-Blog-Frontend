@@ -18,9 +18,9 @@ html {
 }
 
 .featured-image {
-  width: 100%;
-  max-height: 500px;
-  object-fit: cover;
+  padding: 0.25rem;
+  background-color: #fff;
+  border-radius: 0.25rem;
 }
 
 .invalid {
