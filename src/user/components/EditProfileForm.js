@@ -12,7 +12,7 @@ const EditProfileForm = ({ user, onUserEdit }) => {
   const EditProfileSchema = Yup.object().shape({
     username: Yup.string().min(3, "Too Short!").max(50, "Too Long!"),
     email: Yup.string().email("Invalid email"),
-    about: Yup.string().min(10, "Too Short!").max(100, "Too Long!"),
+    about: Yup.string().min(10, "Too Short!").max(200, "Too Long!"),
     image: Yup.mixed().notRequired(),
   });
   return (
