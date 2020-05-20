@@ -12,6 +12,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { toast } from "react-toastify";
 import FollowProfileButton from "./../components/FollowProfileButton";
+import { Newspaper, EnvelopeFill } from "react-bootstrap-icons";
 
 const PublicProfile = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -117,7 +118,7 @@ const PublicProfile = () => {
                   <Tab.Pane eventKey="first">
                     <div className="card">
                       <h5 className="card-header">
-                        Recent blogs by{" "}
+                        <Newspaper /> Recent blogs by{" "}
                         <span className="text-capitalize">{user.username}</span>
                       </h5>
                       <div className="card-body">
@@ -146,7 +147,7 @@ const PublicProfile = () => {
                   <Tab.Pane eventKey="second">
                     <div className="card">
                       <h5 className="card-header">
-                        Message{" "}
+                        <EnvelopeFill /> Message{" "}
                         <span className="text-capitalize">{user.username}</span>
                       </h5>
                       <div className="card-body">

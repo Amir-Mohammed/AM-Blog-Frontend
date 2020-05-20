@@ -12,8 +12,7 @@ const Header = () => {
       <Navbar bg="light" expand="lg">
         <Navbar.Brand as={Link} to="/feeds">
           <span className="text-danger">J</span>
-          <span className="text-primary">S</span>
-          <span>Blog</span>
+          <span className="text-primary">S</span> <span>Blog</span>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

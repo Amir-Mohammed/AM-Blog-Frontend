@@ -5,6 +5,7 @@ import Search from "../../features/Search";
 import axios from "axios";
 import { AuthContext } from "../../helpers/context/auth-context";
 import { toast } from "react-toastify";
+import { ArrowDown } from "react-bootstrap-icons";
 
 const UserFeeds = () => {
   const [blogs, setBlogs] = useState([]);
@@ -75,7 +76,7 @@ const UserFeeds = () => {
           {loading && (
             <span className="spinner-border spinner-border-sm mr-2"></span>
           )}
-          Load more
+          Load more <ArrowDown />
         </button>
       )
     );

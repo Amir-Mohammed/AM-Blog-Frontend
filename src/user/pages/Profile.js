@@ -14,6 +14,13 @@ import { toast } from "react-toastify";
 import ChangePasswordForm from "./../components/ChangePasswordForm";
 import DeleteBlog from "../components/DeleteBlogModel";
 import DeleteAccountForm from "./../components/DeleteAccountForm";
+import {
+  PersonFill,
+  PencilSquare,
+  Newspaper,
+  LockFill,
+  XCircleFill,
+} from "react-bootstrap-icons";
 
 const Profile = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -130,7 +137,9 @@ const Profile = () => {
                 <Tab.Content>
                   <Tab.Pane eventKey="first">
                     <div className="card">
-                      <h5 className="card-header">Personal Info</h5>
+                      <h5 className="card-header">
+                        <PersonFill /> Personal Info
+                      </h5>
                       <div className="card-body">
                         <div className="table-responsive">
                           <table className="table table-hover">
@@ -168,7 +177,9 @@ const Profile = () => {
                   </Tab.Pane>
                   <Tab.Pane eventKey="second">
                     <div className="card">
-                      <h5 className="card-header">Edit profile</h5>
+                      <h5 className="card-header">
+                        <PencilSquare /> Edit profile
+                      </h5>
                       <div className="card-body">
                         <EditProfileForm user={user} onUserEdit={handleEdit} />
                       </div>
@@ -176,7 +187,9 @@ const Profile = () => {
                   </Tab.Pane>
                   <Tab.Pane eventKey="third">
                     <div className="card">
-                      <h5 className="card-header">Recent blogs</h5>
+                      <h5 className="card-header">
+                        <Newspaper /> Recent blogs
+                      </h5>
                       <div className="card-body">
                         {userBlogs.length ? (
                           <table className="table table-hover">
@@ -207,13 +220,17 @@ const Profile = () => {
                   </Tab.Pane>
                   <Tab.Pane eventKey="fourth">
                     <div className="card">
-                      <h5 className="card-header">Change password</h5>
+                      <h5 className="card-header">
+                        <LockFill /> Change password
+                      </h5>
                       <div className="card-body">
                         <ChangePasswordForm />
                       </div>
                     </div>
                     <div className="card mt-4">
-                      <h5 className="card-header">Delete account</h5>
+                      <h5 className="card-header">
+                        <XCircleFill /> Delete account
+                      </h5>
                       <div className="card-body">
                         <DeleteAccountForm />
                       </div>
