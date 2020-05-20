@@ -101,6 +101,7 @@ const Profile = () => {
                   style={{
                     borderRadius: "20px 20px 5px 5px",
                   }}
+                  className="card-profile"
                 >
                   <Card.Header
                     style={{
