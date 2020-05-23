@@ -106,7 +106,7 @@ const Feeds = () => {
           </div>
         </div>
       )}
-      {blogs.length && (
+      {!!blogs.length && (
         <div>
           <div className="container-fluid">{showAllBlogs()}</div>
           <div className="text-center pt-5 pb-5">{loadMoreButton()}</div>
